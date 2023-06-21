@@ -6,4 +6,4 @@ category: [First,Posts]
 layout: post
 ---
 
-This is an ..??~
+This is an .!!
