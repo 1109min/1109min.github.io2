@@ -1,0 +1,130 @@
+---
+title: Typescript-0
+author: Tao He
+date: 2023-06-21
+category: [Typescript]
+layout: post
+comment: true
+---
+
+# Typescrip 랑 인사하기
+
+<!-- 목차 -->
+
+<br>
+
+## 1. Typescript란?
+- 타입스크립트는 자바스크립트에 `타입`을 부여한 언어 - 자바스크립트의 확장 언어
+- 자바스크립트와 달리 브라우저에서 실행하려면 파일을 한 번 `변환`해야함(Compile)
+
+## 2. Typescript를 쓰는 이유는?
+- 에러 사전 방지
+- 코드 가이드 및 자동 완성 (개발 생산성 향상)
+
+### 에러 사전 방지
+다음의 예시를 보자.
+```javascript
+// math.js
+function sum(a, b) {
+    return a + b;
+}
+```
+```typescript
+// math.ts
+function sum(a: number, b: number){
+    return a + b;
+}
+```
+두 코드 모두 두 숫자의 합을 구하는 함수 코드이다. 
+코드 실행 결과를 보면,
+```javascript
+sum(10, 20) // 30
+sum('10', '20') // 1020
+```
+Js로는 문자열이 들어가 우리가 원하는 결과를 얻을 수 없다.
+
+이와 같은 코드동작을 예방할 수 있다.
+
+### 코드 자동 완성과 가이드
+타입스크립트의 또 다른 장점은 코드를 작성할 때 `개발 툴의 기능`을 최대로 활용할 수 있다.
+- Visual Studio Code는 툴의 내부가 타입스크립트로 되어있어 Ts개발에 최적화되어 있다.
+```javascript
+// math.js
+function sum(a, b) {
+  return a + b;
+}
+var total = sum(10, 20);
+total.toLocaleString();
+```
+Js의 경우 `total` 타입이 정해져있지 않기 때문에, 자동 완성이 나오지 않는다.
+
+```typescript
+// math.ts
+function sum(a: number, b: number): number {
+  return a + b;
+}
+var total = sum(10, 20);
+total.toLocaleString();
+```
+하지만 다음과 같이 type을 정하면, `total`에 대한 타입이 지정되어 자동 완성이 미리보기된다.
+
+## 3. Typescript 기본 타입
+- Boolean
+- Number
+- String
+- Object
+- Array
+- Tuple
+- Enum
+- any
+- void
+- null
+- undefined
+- never
+
+### 타입 표기법 (Type Annotation)
+> `:`을 이용하여 자바스크립트 코드에 타입을 정의하는 방식
+
+```typescript
+let str : string = 'hi'; // String
+let num : number = 10; // Number
+let isTrue : boolean = true; // Boolean
+
+// object
+
+let arr : number[] = [1, 2, 3];
+let arr : Array<number> = [1, 2, 3]; // Array
+
+// Tuple
+// 배열의 길이가 고정되고 각 요소의 타입이 지정되어 있는 배열 형식을 의미함
+let arr : [string, number] = ['hi', 10]; // Tuple
+
+// Enum
+enum Avangers { Capt, IronMan, Thor };
+let hero: Avengers = Avengers.Capt;
+let hero: Avengers = Avengers[0];
+
+// any
+let str: any = 'hi';
+let num: any = 10;
+let arr: any = ['a', 2, true]; // any
+
+// void
+function printSomething(): void {
+    console.log('sth');
+}
+
+function returnNothing(): void {
+    return;
+} 
+
+// Never
+// 함수 끝에 절대 도달하지 않는다는 것을 의미
+function neverEnd(): never {
+    while (true) {
+
+    }
+}
+```
+
+
