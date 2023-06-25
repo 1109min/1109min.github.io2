@@ -6,6 +6,7 @@ categories: [Typescript]
 tags: [Typescript]
 layout: post
 comment: true
+published: true
 ---
 
 <!-- 목차 -->

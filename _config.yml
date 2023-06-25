@@ -61,3 +61,6 @@ plugins:
   - jekyll-feed
   - jekyll-readme-index
   - jemoji
+
+//설정
+future:           true
