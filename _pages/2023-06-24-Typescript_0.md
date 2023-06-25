@@ -1,14 +1,12 @@
 ---
-title: Typescript-0
-author: Tao He
+title: Typescrip 란? + 기본 타입  
+author: Lee SeungMin
 date: 2023-06-24
 categories: [Typescript]
 tags: [Typescript]
 layout: post
 comment: true
 ---
-
-# Typescrip 랑 인사하기
 
 <!-- 목차 -->
 
