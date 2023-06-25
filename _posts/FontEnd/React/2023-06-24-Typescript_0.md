@@ -1,7 +1,7 @@
 ---
 title: Typescript-0
 author: Tao He
-date: 2023-06-21
+date: 2023-06-24
 category: [Typescript]
 layout: post
 comment: true
