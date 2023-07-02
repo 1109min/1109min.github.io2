@@ -62,6 +62,6 @@ plugins:
   - jekyll-readme-index
   - jemoji
 
-# Build settings
+
 
 future:           true
