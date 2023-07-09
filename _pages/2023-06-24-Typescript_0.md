@@ -1,5 +1,5 @@
 ---
-title: Typescrip 란? + 기본 타입  
+title: Typescript 란? + 기본 타입  
 author: Lee SeungMin
 date: 2023-06-24
 categories: [Typescript]
